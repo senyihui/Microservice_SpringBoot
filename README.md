@@ -8,7 +8,8 @@ Spring Cloud Eureka是Spring Cloud Netflix项目下的服务治理模块。而Sp
 
 `EurekaServer`：服务注册中心
 
-`EurekaClient`：服务提供方
+`EurekaClient`：服务提供方，其中使用`Spring Cloud Feign`使得编写Web服务客户端变得更加简单。我们只需要通过创建接口并用注解来配置它既可完成对Web服务接口的绑定。
 
 `EurekaConsumer`：服务消费者，访问服务提供方的接口*（即`Client`的接口不对外部开放，需要通过`Consumer`来进行调用）*， 其中使用`Spring Cloud Ribbon`进行负载均衡，它是一个基于HTTP和TCP的客户端负载均衡器。它可以通过在客户端中配置ribbonServerList来设置服务端列表去轮询访问以达到均衡负载的作用。 
 
+![image-20201127202716516](images/image-20201127202716516.png)
