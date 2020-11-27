@@ -19,3 +19,10 @@ Spring Cloud Eureka是Spring Cloud Netflix项目下的服务治理模块。而Sp
 ![image-20201127211632021](images/image-20201127211632021.png)
 
 成功！
+
+---
+
+### 发现问题：
+
+1. 服务发现的加载速度不是在服务器启动的瞬间就完成的
+2. 在`Consumer`使用的URL路径需要和`Client`中保持一致，否则即使运行成功也无法调用
