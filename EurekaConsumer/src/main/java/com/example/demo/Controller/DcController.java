@@ -19,4 +19,10 @@ public class DcController {
         return dcClient.consumer();
     }
 
+    @GetMapping("/fft")
+    public String fft() {
+        return dcClient.fft();
+    }
+
+
 }
