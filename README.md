@@ -18,11 +18,48 @@ Spring Cloud Eureka是Spring Cloud Netflix项目下的服务治理模块。而Sp
 
 `EurekaConsumer`：服务消费者，访问服务提供方的接口*（即在微服务内部调用`Client`的接口）*， 其中使用`Spring Cloud Ribbon`进行负载均衡，它是一个基于HTTP和TCP的客户端负载均衡器。它可以通过在客户端中配置ribbonServerList来设置服务端列表去轮询访问以达到均衡负载的作用。 
 
-将FFT接口配置在`EurekaClient`中，通过`EurekaConsumer`的端口进行调用：
+将FFT接口配置在`EurekaClient`中，通过`EurekaConsumer`的端口进行调用，通过Highcharts提供的API进行图表绘制。
 
-![image-20201127211632021](images/image-20201127211632021.png)
+输入数据为：
 
-成功！
+```json
+[
+    {
+        "real": 1,
+        "imag": 2
+    },
+    {
+        "real": 2,
+        "imag": 3
+    },
+    {
+        "real": 3,
+        "imag": 4
+    },
+    {
+        "real": 4,
+        "imag": 5
+    },
+    {
+        "real": 5,
+        "imag": 6
+    },
+    {
+        "real": 6,
+        "imag": 7
+    },
+    {
+        "real": 7,
+        "imag": 8
+    }
+]
+```
+
+运行结果为：
+
+![1](images/1.png)
+
+![2](images/2.png)
 
 ### 添加服务网关
 
